@@ -20,6 +20,7 @@ We need also to made the p(Kj) smaller than 1 in order to get omega value.
 Explain how you implement your `task1.py` here.
 
 For the first 3*3 matrix, I am able to use LU decomposition to solve it, then when using SOR method, I found out that the equation p(Kj) is more than one, so I am unable to find optimal omega. That why it is unable to use SOR method. For 6*6 matrix, I am able to find out using LU decomposition method.In SOR method, I am able to find out p(Kj) but unable to get the right answer.This is because 6*6 matrix is not a definite matrix. We need to made the matrix definite in order to find correct solution using SOR.
+
 ---------------------------------------------------------
 
 ## Task 2 -- SVD method and image compression
@@ -40,9 +41,10 @@ Lower resolution
 ![lowerresolution.png](lowerresolution.png)
 ![higherresolution.png](higherresolution.png)
 
-What is a sparse matrix?
+What is a sparse matrix? 
 
-A sparse matrix is a matrix in which most of the elements are zero. By contrast, if most of the elements are nonzero, then the matrix is considered dense. The fraction of non-zero elements over the total number of elements  in a matrix is called the sparsity .
+A sparse matrix is a matrix in which most of the elements are zero. By contrast, if most of the elements are nonzero, then the matrix is considered dense. The fraction of non-zero elements over the total number of elements  in a matrix is called the sparsity.
+
 -----------------------------------
 
 <sup>last modified: 11-3-2016 </sup>
