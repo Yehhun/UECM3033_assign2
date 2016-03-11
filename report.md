@@ -36,7 +36,7 @@ How many non zero element in $\Sigma$?
 Put here your lower and better resolution pictures. Explain how you generate
 these pictures from `task2.py`.
 
-We generate by using both pictures.
+We generate by splitting the original picture to green, blue and red. After than we use smaller matrix to combine it to become lower resolution.
 
 Lower resolution
 
