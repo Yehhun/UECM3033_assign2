@@ -57,8 +57,39 @@ def lu(A, b):
 
 def omega_Optimal(A):
     
+    
+    D =  np.diag(np.diag(A))
+    #print('This is diagonal ')
+    #print(D)
+    invD = np.linalg.inv(D)
+    #print('This is inverse diagonal ')
+    #print(invD)
+    #P, l, u = sc.lu(A, False, False, False)
+    L = np.tril(A,-1)
+    U = np.triu(A,1)
+    #print('This is Lower')
+    #print(l)
+    #print(L)
+    #print('This is Upper')
+    #print(u)
+    #print(U)
+    #lu = np.dot(-1, np.add(L,U))
+    #print('This is LU ')
+    #print(lu)
+    
+    K = np.dot(invD,(-L-U))
+    
+    
+    
+    #0 = np.linalg.det(lu - lamda(np.identity))
+    
+    #print(lamda)
+    
+    #print('This is p(K)')
+    #print(K)
+    
     #print('This is eigen values \n============')
-    eigen = np.linalg.eigvals(A)
+    eigen = np.linalg.eigvals(K)
     #print(eigen)
     
     #print('\n\nThis is eigen arrays\n=============')
@@ -71,27 +102,49 @@ def omega_Optimal(A):
     #print(real_eigen)
     
     real_eigen = []
+    iscomplex = False
+    
+    for num in eigen:
+        if(np.iscomplex(num)):
+            print('=========\nThere is complex value\n================')
+            iscomplex = True
+            break
+    
+    if(iscomplex):
+        omega = -1
+        return omega
+    
     
     for num in eigen:
         if(not(np.iscomplex(num))):
             real_eigen.append(num)
+            
+            
+            
+    
             
     #print(real_eigen)
     
     #print('\n\nThis is the highest value of eigen \n=================')
     max_eig = max(real_eigen)
     max_eig = np.real(max_eig)
-    print('MAX_EIG')
+    print('=======\nMAX_EIG\n=======')
     print(max_eig)
     #print(max_eig)
+    if(max_eig > 1 or max_eig < -1):
+        print('===================\n\nThe eigenvalue is larger than 1, will unable to converge the matrix.\n ================')
+        omega = -1
+        return omega
+        
     
-    if( (1-np.power(max_eig,2)) > 1 ):
+    if( (1-np.power(max_eig,2)) > 0 ):
         omega = ( 2 * (1 - np.sqrt(1-np.power(max_eig,2))) ) / np.power(max_eig,2)
     else:
         omega = -1
     
     print('\n\nThis is Omega \n=======================')
     print(omega) 
+    print('\n=======================\n\n')
     
     return omega
     
@@ -100,7 +153,7 @@ def omega_Optimal(A):
 #============SOR method start ================
 def sor(A, b):
     # Edit here to implement your code    
-    ITERATION_LIMIT = 200    
+    ITERATION_LIMIT = 100
     
     omega = omega_Optimal(A)
     
@@ -132,7 +185,7 @@ def sor(A, b):
     return list(sol)
     
 #============SOR method END ================
-#1303042    
+    
 
 def solve(A, b):
 
@@ -157,7 +210,7 @@ def solve(A, b):
 if __name__ == "__main__":
     ## import checker
     ## checker.test(lu, sor, solve)
-    
+
     A = [[2,1,6], [8,3,2], [1,5,1]]
     b = [9, 13, 7]
     A = np.array(A).astype(float) 
