@@ -26,11 +26,12 @@ For the first 3*3 matrix, I am able to use LU decomposition to solve it, then wh
 
 Put here your picture file (Lenna.png)
 
-![2_Picture.png](2_Picture.png)
+![2_Picture.png](2_Picture.jpg)
 
 How many non zero element in $\Sigma$?
 
-30 non zero element
+30 non zero elements.
+
 Put here your lower and better resolution pictures. Explain how you generate
 these pictures from `task2.py`.
 
