@@ -1,8 +1,8 @@
 UECM3033 Assignment #2 Report
 ========================================================
 
-- Prepared by: ** Put your name here**
-- Tutorial Group: T2/T3
+- Prepared by: Tee Yeh Hun
+- Tutorial Group: T2
 
 --------------------------------------------------------
 
@@ -26,7 +26,6 @@ For the first 3*3 matrix, I am able to use LU decomposition to solve it, then wh
 
 Put here your picture file (Lenna.png)
 
-![Lenna.png](Lenna.png)
 ![2_Picture.png](2_Picture.png)
 
 How many non zero element in $\Sigma$?
@@ -34,11 +33,15 @@ How many non zero element in $\Sigma$?
 30 non zero element
 Put here your lower and better resolution pictures. Explain how you generate
 these pictures from `task2.py`.
+
 We generate by using both pictures.
+Lower resolution
+![lowerresolution.png](lowerresolution.png)
+![higherresolution.png](higherresolution.png)
 
 What is a sparse matrix?
 
- A sparse matrix is a matrix in which most of the elements are zero. By contrast, if most of the elements are nonzero, then the matrix is considered dense. The fraction of non-zero elements over the total number of elements  in a matrix is called the sparsity .
+A sparse matrix is a matrix in which most of the elements are zero. By contrast, if most of the elements are nonzero, then the matrix is considered dense. The fraction of non-zero elements over the total number of elements  in a matrix is called the sparsity .
 -----------------------------------
 
 <sup>last modified: 11-3-2016 </sup>
