@@ -37,7 +37,9 @@ Put here your lower and better resolution pictures. Explain how you generate
 these pictures from `task2.py`.
 
 We generate by using both pictures.
+
 Lower resolution
+
 ![lowerresolution.png](lowerresolution.png)
 
 Better resolution
