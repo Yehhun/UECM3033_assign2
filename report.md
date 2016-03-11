@@ -39,6 +39,9 @@ these pictures from `task2.py`.
 We generate by using both pictures.
 Lower resolution
 ![lowerresolution.png](lowerresolution.png)
+
+Better resolution
+
 ![higherresolution.png](higherresolution.png)
 
 What is a sparse matrix? 
